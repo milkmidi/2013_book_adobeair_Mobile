@@ -1,0 +1,268 @@
+@charset "utf-8";
+/* 
+milkmidi
+2012 12 30
+*/
+body{
+	/* background-image:url(../images/bg.png); 	 */
+ 	background-color:#292b2f;
+/* 	background-color:#e1e1e1; */	
+}
+
+h3{
+ 	font-size:18px; 
+
+}
+
+#header{
+	width:100%;
+	height:70px;
+	background:#1a1c1d;
+}
+	#top{
+		width:100%;
+		height:100%;
+		max-width:1000px;	
+		margin:0 auto 0 auto;
+	}
+		#logo{
+			width:139px;
+			height:36px;
+			position:relative;
+			top:17px;
+
+			background:url(../images/logo.png);
+		}
+
+#ie_go_to_hell{
+	text-align:center;
+	display:none;
+	font-size:16px;			
+	color:#eee;
+	line-height:20px;
+	font-family:"微軟正黑體";
+	padding-top:15px;	
+	padding-bottom:15px;
+}
+#goTop{
+	position:fixed;
+	right:10px;
+	bottom:10px;
+	width:100px;
+	height:50px;
+	display:none;
+	background:#e1e1e1;
+	z-index:20;
+	text-align:center;	
+	list-style:none;		
+	font-size:13px;
+	font-family:'Oxygen', sans-serif;		
+	text-decoration:none;	
+	color: #454545;			
+	border-radius: 5px;
+	line-height:50px;
+	box-shadow: 5px 5px 10px #111111;	
+}
+		
+#iconContainer{
+ 	position:relative; 
+	width:512px;
+	height:512px;
+	margin:0 auto;	
+}
+	#icon{
+		position:absolute;		
+		top:0;
+		width:100%;
+		height:516px;
+/*		display:none;		*/
+		background:url(../images/icon.png) top center no-repeat;
+	}
+	.iframe_wrap{
+		position:absolute;
+		width:330px;
+		height:300px;
+		margin:75px 0 0 82px;
+/*		margin:0 auto;*/
+/*		top:50px;*/
+	}
+	iframe{
+		position:relative;
+		width:330px;
+		height:300px;
+		margin:0 auto;
+	}
+#buttonContainer{
+	width:420px;
+	height:auto;
+	margin:0 auto;
+	position:relative;
+}
+		#android{
+			position:relative;			
+			width:200px;
+			height:69px;
+			background:url(../images/appstore_android.png) top right;
+			cursor:pointer;
+		}
+		#android:hover{
+			background-position:bottom right;
+		}
+		#ios{
+			position:absolute;
+			right:0;
+			top:0;
+			width:200px;
+			height:69px;
+			cursor:pointer;
+			background:url(../images/appstore_android.png);
+		}
+		#ios:hover{
+			background-position:left bottom;
+		}
+		#fb{
+			width:247px;
+			height:42px;
+			margin:5px auto;
+			cursor:pointer;
+			background:url(../images/fb.png);
+		}
+		#fb:hover{
+			background-position:bottom;
+		}
+		
+
+#wrap{
+	position:relative;	
+	width:100%;
+	height:100%;
+	max-width:1000px;	
+	margin:0 auto 0 auto;
+	/* -webkit-box-shadow:0px 0px 6 px rgba(0,0,0,.2);
+	box-shadow:0px 0px 6px rgba( 0,0,0,.2); */
+}
+	
+
+/* 列表容器 _________________________________*/
+#kv-ist{
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+	.divide{
+		width:100%;
+		height:40px;
+		display:block;
+		margin-bottom:40px;
+		background:url(../images/divide.png) center no-repeat;
+	}
+	.list-item{ /* 圖 */		
+		width:100%;
+		height:600px;
+		position:relative;		
+	}	
+	.list-item-image{
+		width:100%;
+		height:600px;
+		position:absolute;
+		background-repeat:no-repeat;
+		background-position:50% 50%;;
+	    background-size:auto auto;
+		background-image:url(../images/loader-bar.gif); 		
+	}
+	.listTXT{ /* 文字 */
+/* 		width:100%;不要加，會超出去 */
+		height:auto;
+ 		padding:16px; 
+		position:absolute;
+		background:#1a1c1d;
+		font-size:16px;		
+		color:#eee;
+		line-height:20px;
+		font-family:"微軟正黑體";
+		display:none;
+	}
+
+#navi-section-fixed-right{
+	position:fixed;
+	top:220px;
+	right:10px;
+	width:200px;
+	height:auto;	
+ 	background:#e1e1e1; 
+	z-index:20;
+	list-style:none;		
+	border-radius: 3px;
+	box-shadow: 5px 5px 10px #111111;
+	
+
+
+
+}
+	#navi-section-fixed-right li {
+		display:block;
+		outline:none;
+		height:16px;
+		position:relative;
+		margin:6px;
+	}
+		#navi-section-fixed-right a{
+			font-size:13px;
+			font-family:'Oxygen', sans-serif;		
+			text-decoration:none;	
+			color: #454545;			
+		}
+		#navi-section-fixed-right a:hover{
+			color: #909090;			
+	}
+	
+	#selected{
+		width:100%;
+		height:22px;
+		position:absolute;
+		background-color:#bbb;
+	}
+
+
+@media (max-width: 480x) {
+	
+}
+
+@media (max-width: 760px) {
+#navi-section-fixed-right{
+	display:none;
+	visibility:hidden;
+}
+.divide{
+/* 	 display:none;  */
+ 	background-size:100% auto; 	 
+}
+.list-item{
+	height:auto;
+}
+	.list-item-image{
+		width:100%;
+		height:auto;
+		position:relative;
+		padding:70% 0 0 0;	
+		background-size:90% auto; 	
+	}
+	.listTXT{
+	/* 	margin:0 0 ; */
+	/* 	padding:30px 0; */
+		/* padding:10% 5% 5% 8%; */
+	/* 	width:100%; */
+		height:auto;
+		position:relative;
+		display:block;	
+	}
+	
+.iframe_wrap{
+	display:none;
+}
+#goTop{
+	font-size:20px;
+	display:block;
+}
+
+}

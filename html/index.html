@@ -1,0 +1,269 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=9" />
+<meta name="description" content="雖然 Flash 已經是大家所熟悉的軟體, 不過在開發行動裝置 App 方面, 還是有許多小細節要注意, 筆者也將在本書中提供個人的開發心得, 帶領大家一起了解並進入 Adobe AIR 的世界。" />
+
+<meta property="og:title" content="用 Flash 輕鬆打造 iPhone / Android 手機 App"/>
+<meta property="og:image" content="http://milkmidi.com/2013Book/images/share.jpg"/>
+<meta property="og:description" content="雖然 Flash 已經是大家所熟悉的軟體, 不過在開發行動裝置 App 方面, 還是有許多小細節要注意, 筆者也將在本書中提供個人的開發心得, 帶領大家一起了解並進入 Adobe AIR 的世界。"/>
+
+<meta name="viewport" content="width=640,maximum-scale=1" />
+<!--meta name="viewport" content="width=device-width" /-->
+<title>用 Flash 輕鬆打造 iPhone / Android 手機 App</title>
+<link rel="stylesheet" type="text/css" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" href="css/layout.css" />
+<!--link href="css/colorbox.css" rel="stylesheet" type="text/css" media="all"-->
+<link rel="image_src" href="images/share.jpg" />
+<link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css' />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+<script type="text/javascript" src="js/jquery.address-1.5.min.js"></script>
+<!--script type="text/javascript" src="js/jquery.colorbox-min.js"></script-->
+<script type="text/javascript" src="js/app.js"></script>
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+<script type="text/javascript">
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+<div id="header">
+	<div id="top">
+		<div id="logo">
+	    </div><!-- logo end -->
+    </div>
+</div><!-- header end -->
+
+<div id="wrap">
+   
+	<div id="iconContainer">  
+        <div id="android_iframe_wrap" class="iframe_wrap">
+	        <iframe id="android_iframe" width="330px" height="300px" scrolling="no"></iframe>
+        </div>
+        <div id="apple_iframe_wrap" class="iframe_wrap">
+	        <iframe id="apple_iframe" width="330px" height="300px" scrolling="no"></iframe>
+        </div>
+	   	<div id="icon"></div>       
+    </div><!-- end iconContainer -->
+    
+    <div id="ie_go_to_hell">
+    為了守護世界的和平, 請使用支援 Html5 的瀏覽器, 好的瀏覽器可以讓你每天準時上下班。
+    </div>
+
+	<div id="buttonContainer">    	
+   		<a id="android_btn" href="https://play.google.com/store/apps/details?id=air.com.milkmidi.book2013samples" target="_blank" ><div id="android"></div></a>
+       	<a id="ios_btn" href="https://itunes.apple.com/us/app/milkmidi-book-samples/id618792330?ls=1&mt=8" target="_blank" ><div id="ios"></div></a>	
+		<a id="fb_btn" href="https://www.facebook.com/milkmidifans" target="_blank"><div id="fb"></div></a>
+    </div><!-- end buttonContainer-->
+    
+
+    <!--     <div class="divide"></div> -->
+    <div id="kv-list">
+	    <div class="list-item"><div class="list-item-image"></div>
+        	
+        	<div class="listTXT"><h3>01 Hello Adobe AIR 製作第一個 Adobe App</h3><br />第一個應用程式, 主要是要讓讀者了解如何透過 FlashCS6 發佈應用程式到你的裝置上, 並獲取裝置上的各種屬性, 如DPI 值, 顯示寬、高, 是否支援多點觸控等屬性等, 並了解 Android 和 iOS 在設定上有什麼不同之處。<br /><br />這個章節會學習到：<br />1.如何將 Flash App發佈到行動裝置上<br/>2.如何擷取裝置上解析度<br/>3. Android, iOS應用程式描述檔完整說明<br/>4. Android Premission 相關說明<br/></div>
+        </div>
+        <span class="divide"></span>
+        
+   	    <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>02 3D 滾球 App：運用加速器範本</h3><br />開發行動裝置應用程式最有趣之處, 就是可以活用裝置上的感應器, 和以往開發網站上的行為完全的不一樣, 在這個範例就來介紹 Accelerometer 三軸加速感應器的運用。
+利用裝置的移動感應器, 偵測三軸的移動變化並回傳加速資料<br /><br />
+這個章節會學習到：<br />
+1.	Accelerometer 三軸加速感應器<br />
+2.	三軸所定義的方向數值<br />
+
+</div>
+        </div>
+        <span class="divide"></span>
+        
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>03 貓咪往上跳：三軸感應器的應用</h3><br/>相信大家都玩過這樣類似的遊戲
+貓咪會一直往下降, 需使用加速器的 x 軸, 來控制貓咪的左右位置, 移動到雲上, 然後再不斷的往上跳。
+過程中吃到貓餅干的話, 就可以來個大跳躍, 分數直直上, 當貓咪下降超過場景的高度時, 遊戲失敗。
+</div>
+        </div>
+        <span class="divide"></span>
+        
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>04 學習 Flash App 的快速編譯技巧</h3><br/>在開發 Flash 應用程式時, 大部份的時間都需要不斷的修改程式碼與測試, 反而設計元素會更動的機會較少, Flash 每次編譯都會重新取樣所有的元件, 往往在發佈大型專案時要等上一段時間。
+為了能夠快速編譯測試, 我們選擇了先將設計元素編譯成 swf及 swc 格式, 接著再引用進我們的專案裡, 這樣就能夠省去每次重新編譯的時間。
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>05 在 Flash APP 中運用 QNX UI Component</h3><br/>除了使用 Flash 當然你也可以選擇使用 Flex 開發, 但超出本書的介紹範圍。
+QNX UI Component 相當的好用, 這套原本是出現在 BlackBerry 裡, 當你下載好 BlackBerry SDK for Adobe AIR時, 就可以在裡面找到 qnx-screen.swc, 即然都是 Adobe AIR, 理所當然就可以用在其他的平台上。
+QNX 的優點：小巧, 好學, 又提供了許多常用的組件, 像 List, Picker 等元件, 在換 Skin 方面也相當的好上手。
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>06 Flash 行動裝置優化技巧：點陣圖快取與 GPU 最佳化</h3><br/>開發行動裝置上的 AIR, 有許多的小細結和一般的桌機上有些不同, 特別是效能的部份要去優化, 這個章節就先來介紹優化技巧1</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>07 圖片播放器：手勢與多點觸控</h3><br/>桌機上可以使用滑鼠來操作, 可以點擊到很小的物件, 
+但在行動裝置要在小小的畫面放上一堆的操作按鈕, 就非常的不友善
+這時候手勢操作就變的非常的重要。<br/><br/>這個章節會學習到<br/>Flash 內建的手勢事件, 放大、縮小、旋轉、位移<br/>多點觸控的原理
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>08 地圖：GPS 地理位置感應器</h3><br/>目前 Adobe AIR 在行動裝置上, 預設支援二種裝置感應器, 第一種是第二章介紹的加速度感應器
+第二種即是 GPS 地理位置感應器。<br /><br />這個章節會學習到<br />
+GPS 地址位感應器<br />
+StageWebView 載入 html <br />
+StageWebView 載入 GoogleMap<br />
+
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>09 扭蛋抽抽樂：三軸加速度應用篇</h3><br />想知道自己今天的運勢嗎? 搖一下就知道了。<br /><br />這個章節會學習到<br />
+手機的晃動偵測<br />
+Flash 時間軸與類別檔的應用
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>10 拍照：啟動相機與讀取相簿</h3><br />Adobe AIR 已內建支援取存裝置裡的相片集, 或是直接啟動裝置的像機。也可以非常簡單的方式將圖片保存到裝置的相片集裡。<br />這個章節會學習到<br />
+1 啟動裝置的像機拍照, 並傳回應用程式裡<br />
+2 讀取置裡的相片集<br />
+3 圖片最佳顯示方式<br />
+4 將視覺圖片保存至裝置的相片集裡
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>11 學習條件式編譯標籤的運用：Conditional Compilation</h3><br />在開發應用程式時, 需要不斷的發佈測試, 但想要在測試階段和正式發佈時, 能夠執行不同的函式, 或是依平台執行對映的函式, 相信大家都是使用 if , else 來做判斷, 其實在 Flash 裡有更好的寫法, 使用的是 Flex conditional compilation, 筆者稱做為條件式編譯標籤。<br /><br />這個章節會學習到<br />
+條件式編譯標籤<br />
+依各平台決定編譯的程式碼
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>12 學習運用 Singleton 單一設計模式來寫程式</h3><br />開發應用程式時, 當專案越來越大, 程式碼一多, 如果沒有規畫好架構, 日後的新增修改就會變的很麻煩, 所以在這個章節要來介紹程式設計之美, Singleton 單一設計模式。</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>13 簡單畫筆：開發繪圖程式</h3><br />這個章節我們將學習到如何在 AIR 開發一個畫筆應用程式, 
+使用者使用手指在螢幕上畫繪圖, 並可切換顏色, 最後可以選擇將畫好的圖片存進裝置裡的相本集<br /><br />這個章節會學習到<br />
+繪圖筆功能<br />
+橡皮擦功能<br />
+截取瑩幕上的色碼<br />
+將圖片存入至裝置相本集<br />
+
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>14 麥克風：錄音與儲存聲音檔</h3><br />使用者透過行動裝置的麥克風來錄音, 可以播放錄好的聲音, 也可以將聲音檔另存成實體的 WAV 或是 MP3 檔案<br /><br />這個章節會學習到：<br />
+麥克風類別的使用<br />
+Flash SampleData 錄音與播放<br />
+Adobe AIR File 類別的寫法<br />
+將錄音的檔案存成 wav 格式<br />
+將 wav 格式轉成 mp3 格式<br />
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>15 高畫質影音播放器：StageVideo 的應用</h3><br />從 FlashPlayer10.3 開始, 支援了效能更好的影片類別 StageVideo, 支援 H.264 影片格式
+使用硬體加速, 因而改善視訊顯示效能, 讓 CPU 使用量降低, 在行動裝置上特別的有效。<br /><br />這個章節會學習到<br />
+StageVideo 類別<br />
+依裝置解悉度做影片最佳裁切<br />
+</div>
+        </div>
+    
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>16 Flash App 的解析度設定與效能最佳化</h3><br />應用程式要設計的好, 除了好看的使用者介面外, 操作上的使用者體驗也很重要, 這一篇就來探討關於 Flash 效能優化的方法</div>
+        </div>
+       
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>附錄 A 將 Flash AIR App 上架到 iOS 平台<h3><br />目前 AIR for iOS 支援的裝置及版本
+iPod touch（第 3 代）32 GB 和 64 GB 機型、iPod touch 4、iPhone 3GS、iPhone 4、iPad、iPad 2, iPad3
+iOS 4, iOS5.0 和 iOS5.1<br />
+
+想在 iOS 平台上開發應用程式, 有幾個步驟需要設定<br />
+Step1 成為 iOS的開發者, 年費 99 美金。<br />
+Step2 準備一台 Mac 系統, 用來產生驗證檔<br />
+Step3 開啟 應用程式 / 工具程式/ 鑰匙圈存取<br />
+Step4 選擇 鑰匙圈存取 / 憑證輔助程式 / 從憑證授權要求憑證<br />
+</div>
+        </div>
+        <span class="divide"></span>
+         <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>附錄 B 將 Flash AIR App 發佈到 Android 裝置上<h3><br />
+</div>
+        </div>
+        <span class="divide"></span>
+        <div class="list-item"><div class="list-item-image"></div>
+        	<div class="listTXT"><h3>附錄 C 奶綠茶老師開發的好用 Flash 外掛</h3><br />在使用 Embed 元件時, 如果元件裡有十幾個名稱, 那不就要一個一個打?
+如果場景上有十幾個元件, 要全部座標整數化呢?
+為了解決這樣麻煩的問題, 可以安裝筆者開發的 Flash 外掛
+</div>
+        </div>
+        <span class="divide"></span>
+  
+    </div>
+    
+    <ul id="navi-section-fixed-right">
+    	<div id="selected"></div>
+        <li><a href="">01  Hello Adobe AIR</a></li>
+        <li><a href="">02 3D 滾球 App</a></li>
+        <li><a href="">03 貓咪往上跳</a></li>
+        <li><a href="">04 快速編譯技巧</a></li>
+        <li><a href="">05 QNX UI Component</a></li>
+        <li><a href="">06 Flash 行動裝置優化技巧1</a></li>
+        <li><a href="">07 手勢與多點觸控</a></li>
+        <li><a href="">08 GPS 地理位置感應器</a></li>
+        <li><a href="">09 扭蛋抽抽樂</a></li>
+        <li><a href="">10 啟動相機與讀取相簿</a></li>
+        <li><a href="">11 條件式編譯</a></li>
+        <li><a href="">12 Singleton 單一設計模式</a></li>
+        <li><a href="">13 開發繪圖程式</a></li>
+        <li><a href="">14 麥克風錄音與儲存聲音檔</a></li>
+        <li><a href="">15 高畫質影音播放器StageVideo</a></li>
+        <li><a href="">16 解析度設定與效能最佳化2</a></li>
+        <li><a href="">附錄 A 上架 iOS 平台</a></li>
+        <li><a href="">附錄 B 發佈到 Android 裝置</a></li>
+        <li><a href="">附錄 C 奶綠茶超好用外掛</a></li>
+        <div class="fb-like" data-href="http://milkmidi.com/2013Book/" data-send="false" data-layout="button_count" data-width="200" data-show-faces="false" data-colorscheme="dark"></div>
+    </ul><!-- end navi-section-fixed-right-->
+    
+
+</div>
+
+    <div id="goTop">GoTop</div>
+
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-37207237-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
+  function tracker(value){
+  	_gaq.push(['_trackPageview','/'+value]);
+  }
+
+</script>
+</body>
+</html>
