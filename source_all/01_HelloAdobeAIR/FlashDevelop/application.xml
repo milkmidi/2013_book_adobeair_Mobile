@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!-- AIR 版本宣告, 如果者使用的版本較低, 會無法安裝 -->
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+	<!-- 
+	應用程式的唯一 id 值
+	不可使用英文、數字、底線以外的字元
+	一般習慣使用網域名稱的倒裝
+	筆者的網域為：http://milkmidi.com
+	那 id 就會取為：com.milkmidi.應用程式名稱
+	-->
+	<id>com.milkmidi.hello</id>
+	
+	<!-- 應用程式的名稱 -->
+	<name>Hello AIR</name> 
+	<filename>Hello AIR</filename>
+	
+	<!-- 版本號 -->
+	<versionNumber>1</versionNumber>
+	
+	<!-- 版本號標籤 -->
+	<versionLabel>0.1 Beta 1</versionLabel>
+	
+	<!-- 支援的裝置為行動裝置 -->
+	<supportedProfiles>mobileDevice</supportedProfiles>	
+	
+	<copyright>Copyright © milkmidi</copyright>	
+	
+	<!-- 主要應用程式 SWF  -->
+	<initialWindow>
+				
+		<!-- SWF 檔名 -->
+		<content>application.swf</content>		
+		
+		<!-- 
+		應用程式顯示方向 
+		portrait：縱向
+		landscape：橫向
+		-->
+		<aspectRatio>portrait</aspectRatio>		
+		
+		<!-- 是否可旋轉裝置, 預設為 false -->
+		<autoOrients>false</autoOrients>		
+		
+		<!-- 是否滿版, 是的話會佔用掉系統狀態列 -->
+		<fullScreen>false</fullScreen>
+		
+		<!-- 
+		圖像處理方式
+		cpu：傳統的方式, 未使用硬體加速。
+		gpu：使用硬體加速, 可提高顯示速度, 但混色模式、濾鏡無法使用。
+		direct：全新處理方式, 使用 Stage3D, StageVideo 需指定該模式
+		-->
+		<renderMode>auto</renderMode>		
+		
+	</initialWindow>
+	
+	<!-- 應用程式啟動圖示 -->
+	<icon>
+		<!-- 
+		36x36  Andriod
+		48x48  Android, iOS
+		57x57  iOS
+		72x72  Android, iOS		
+		114x114 iOS
+		512x512 iOS		
+		-->
+		<image36x36>icons/36.png</image36x36>
+		<image48x48>icons/48.png</image48x48>
+		<image57x57>icons/57.png</image57x57>
+		<image72x72>icons/72.png</image72x72>		
+		<image114x114>icons/114.png</image114x114>
+		<image512x512>icons/512.png</image512x512>
+	</icon>
+	
+	<!-- Android 裝置專用 
+	更多的說明文件, 請參考 http://developer.android.com
+	-->
+	<android>
+		<manifestAdditions>			  
+		<![CDATA[
+			<manifest android:installLocation="auto"><!-- 將程式安裝到記憶卡上 -->			
+				
+				<!-- Android 3.0+ 啟用硬體加速, StageVideo 會用到 -->
+				<application android:hardwareAccelerated="true" /> 
+				
+				<!-- 
+				uses-permission
+				Android 的安全模式規定
+				每個應用程式必需要求使用權限, 才能使用相關的功能				
+				-->
+				
+				<!-- 網路連線, 開啟後才能使用 Loader, URLLoader 等功能 -->
+				<uses-permission android:name="android.permission.INTERNET"/>		
+				
+				<!-- 透過 Geolocation 類別存取 WIFI 與行動電話網路位置 -->
+				<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> 
+				
+				<!-- 透過 Geolocation 類別存取 GPS 資料 -->
+                <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> 
+				
+				<!-- 允許應用程式寫入裝置上的記憶卡 -->
+				<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> 
+				
+				<!-- 透過 NetworkInfo 類別存取網路資訊 -->
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+                <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> 
+				
+				<!-- 使用攝影機, Camera 類別 -->
+				<uses-permission android:name="android.permission.CAMERA" /> 
+				
+				<!-- 啟用麥克風錄音 -->
+				<uses-permission android:name="android.permission.RECORD_AUDIO" /> 
+				
+				<!-- 避免裝置進入休眠 -->
+				<uses-permission android:name="android.permission.WAKE_LOCK" /> 
+			</manifest>
+			
+		]]>
+		</manifestAdditions>
+	</android>
+	
+    <iPhone> 
+        <InfoAdditions>
+		<![CDATA[ 		
+		
+			<!-- iOS 會自動在 icon 上加入亮光效果, 設成 true 可取消該功能 -->
+			<key>UIPrerenderedIcon</key> 
+			<true/> 
+			
+			<!-- iOS 裝置機型 -->
+			<key>UIDeviceFamily</key> 
+			<array>				
+				<!-- 1：支援 iPhone, iPod Touch -->
+				<string>1</string> 				
+				
+				<!-- 2：支援 iPad -->
+				<string>2</string>
+			</array>
+		
+			<!--  相容性篩選, 在有特定的硬體裝置才能安裝 -->
+			<key>UIRequiredDeviceCapabilities</key> 
+			<array> 
+				<!-- 麥克風 -->
+				<string>microphone</string> 
+				
+				<!-- 攝影機 -->
+				<string>still-camera</string> 
+			</array>
+        ]]>
+		</InfoAdditions> 
+		<!-- 
+		高解析度顯示 
+		standard (預設值) 或 high 
+		以 iPhone3 和 iPhone4 為例
+		如果設成 standard 應用程式的場景大為 320x480 
+		設成 high, 場景大小即為 640x960
+		-->
+		<!--<requestedDisplayResolution>high</requestedDisplayResolution>-->
+		
+		<!-- 
+		iOS 啟動影像
+		依檔名放至到編譯的目錄下即可
+		Default.png  320x480 iPhone，標準解析度
+		Default@2x.png  640x960  iPhone，高解析度
+		Default-Portrait.png  768 x 1004  iPad，縱向
+		Default-Landscape.png  1024 x 748  iPad，靠左橫向
+		-->
+    </iPhone> 
+	<!-- 
+	AIR options:
+	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+	AIR mobile options:
+	http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffe.html
+	Android manifest documentation:
+	http://developer.android.com/guide/topics/manifest/manifest-intro.html
+	-->
+</application>

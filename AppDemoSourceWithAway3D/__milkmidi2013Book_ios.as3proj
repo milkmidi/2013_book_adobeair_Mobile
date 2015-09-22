@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<project version="2">
+  <!-- Output SWF options -->
+  <output>
+    <movie outputType="Application" />
+    <movie input="" />
+    <movie path="bin\application.swf" />
+    <movie fps="34" />
+    <movie width="480" />
+    <movie height="800" />
+    <movie version="3" />
+    <movie minorVersion="5" />
+    <movie platform="AIR Mobile" />
+    <movie background="#FFFFFF" />
+    <movie preferredSDK="Flex 4.6.0, AIR 3.4;4.6.0, 3.4;" />
+  </output>
+  <!-- Other classes to be compiled into your SWF -->
+  <classpaths>
+    <class path="src" />
+    <class path="..\source_all\_libs_" />
+    <class path="..\source_all\01_HelloAdobeAIR\FlashDevelop" />
+    <class path="..\source_all\03_CatJumper\FlashDevelop" />
+    <class path="..\source_all\05_qnx_ui_component" />
+    <class path="..\source_all\04_Embed_SWC\01_Embed_SWC" />
+    <class path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop" />
+    <class path="..\source_all\07_Gesture\FlashDevelop" />
+    <class path="..\source_all\08_Geolocation\FlashDevelop" />
+    <class path="..\source_all\09_Shake\FlashDevelop" />
+    <class path="..\source_all\10_CameraRoll\FlashDevelop" />
+    <class path="..\source_all\11_ConditionalCompilation\FlashDevelop" />
+    <class path="..\source_all\12_Singleton\FlashCS6" />
+    <class path="..\source_all\13_DrawPencil\FlashDevelop" />
+    <class path="..\source_all\14_MicRecorder\FlashDevelop" />
+    <class path="..\source_all\15_StageVideo\FlashDevelop" />
+    <class path="..\source_all\16_P2PChat\FlashDevelop" />
+    <class path="..\source_all\17_Extensions_Android\FlashDevelop" />
+  </classpaths>
+  <!-- Build options -->
+  <build>
+    <option accessible="False" />
+    <option allowSourcePathOverlap="False" />
+    <option benchmark="False" />
+    <option es="False" />
+    <option locale="" />
+    <option loadConfig="" />
+    <option optimize="True" />
+    <option omitTraces="True" />
+    <option showActionScriptWarnings="True" />
+    <option showBindingWarnings="True" />
+    <option showInvalidCSS="True" />
+    <option showDeprecationWarnings="True" />
+    <option showUnusedTypeSelectorWarnings="True" />
+    <option strict="True" />
+    <option useNetwork="True" />
+    <option useResourceBundleMetadata="True" />
+    <option warnings="True" />
+    <option verboseStackTraces="False" />
+    <option linkReport="" />
+    <option loadExterns="" />
+    <option staticLinkRSL="True" />
+    <option additional="" />
+    <option compilerConstants="CONFIG::swf,false" />
+    <option minorVersion="" />
+  </build>
+  <!-- SWC Include Libraries -->
+  <includeLibraries>
+    <!-- example: <element path="..." /> -->
+  </includeLibraries>
+  <!-- SWC Libraries -->
+  <libraryPaths>
+    <element path="..\..\..\source\_libs_\qnx-screen.swc" />
+    <element path="..\..\..\source\_libs_\greensock.swc" />
+    <element path="..\..\..\source\_libs_\starling.swc" />
+    <element path="libs\away3d-core-fp11_4_1_0_Alpha.swc" />
+    <element path="libs\as3-signals_v0.8.swc" />
+    <element path="..\..\source\_libs_\greensock.swc" />
+    <element path="fla\milkmidi_ani.swc" />
+    <element path="extensions\ios\NativeAlert.ane" />
+    <element path="extensions\ios\com.adobe.extensions.Vibration.ane" />
+  </libraryPaths>
+  <!-- External Libraries -->
+  <externalLibraryPaths>
+    <!-- example: <element path="..." /> -->
+  </externalLibraryPaths>
+  <!-- Runtime Shared Libraries -->
+  <rslPaths>
+    <!-- example: <element path="..." /> -->
+  </rslPaths>
+  <!-- Intrinsic Libraries -->
+  <intrinsics>
+    <!-- example: <element path="..." /> -->
+  </intrinsics>
+  <!-- Assets to embed into the output SWF -->
+  <library>
+    <!-- example: <asset path="..." id="..." update="..." glyphs="..." mode="..." place="..." sharepoint="..." /> -->
+  </library>
+  <!-- Class files to compile (other referenced classes will automatically be included) -->
+  <compileTargets>
+    <compile path="src\milkmidi\book2013\MainEntry.as" />
+  </compileTargets>
+  <!-- Paths to exclude from the Project Explorer tree -->
+  <hiddenPaths>
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\bat" />
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\dist" />
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\icons" />
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\01_HelloAdobeAIR\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\bat" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\bin" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\dist" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\fla" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\03_CatJumper\FlashDevelop\icons" />
+    <hidden path="src\milkmidi\away3d" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\dist" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\icons" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\bat" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\07_Gesture\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\bat" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\dist" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\fla" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\icons" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\06_CatchAsBitmapMatrix\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\bat" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\dist" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\icons" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\08_Geolocation\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\bat" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\dist" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\fla" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\icons" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\09_Shake\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\bat" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\dist" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\fla" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\icons" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\10_CameraRoll\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\bat" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\cert" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\dist" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\fla" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\icons" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\13_DrawPencil\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\bat" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\dist" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\fla" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\icons" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\libs" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\_MicRecorder_Web.as3proj" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\14_MicRecorder\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\bat" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\dist" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\fla" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\icons" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\_StageVideo_Mobile.as3proj" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\15_StageVideo\FlashDevelop\Run.bat" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\bat" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\cert" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\dist" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\icons" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\application.xml" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\PackageApp.bat" />
+    <hidden path="..\source_all\16_P2PChat\FlashDevelop\Run.bat" />
+    <hidden path="src\milkmidi\book2013\MainEntryAndroid.as" />
+    <hidden path="application.xml" />
+    <hidden path="application_android.xml" />
+    <hidden path="Run_android.bat" />
+    <hidden path="Run_desktop.bat" />
+    <hidden path="Run_ios.bat" />
+  </hiddenPaths>
+  <!-- Executed before build -->
+  <preBuildCommand />
+  <!-- Executed after build -->
+  <postBuildCommand alwaysRun="False" />
+  <!-- Other project options -->
+  <options>
+    <option showHiddenPaths="False" />
+    <option testMovie="Custom" />
+    <option testMovieCommand="Run_ios.bat" />
+  </options>
+  <!-- Plugin storage -->
+  <storage />
+</project>

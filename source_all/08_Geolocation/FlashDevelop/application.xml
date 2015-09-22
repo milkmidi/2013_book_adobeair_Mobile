@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+  <id>com.milkmidi.geolocation</id>
+  <filename>Geolocation</filename>
+  <name>Geolocation</name>
+  <versionNumber>0.0.1</versionNumber>
+   <supportedProfiles>mobileDevice</supportedProfiles>
+  
+  <initialWindow>
+    <content>application.swf</content>
+    <autoOrients>false</autoOrients>
+    <fullScreen>false</fullScreen>
+    <visible>false</visible>
+    <systemChrome>standard</systemChrome>
+  </initialWindow>
+  <icon>
+    <image36x36>icons/36.png</image36x36>
+    <image48x48>icons/48.png</image48x48>
+    <image72x72>icons/72.png</image72x72>
+    <image114x114>icons/114.png</image114x114>
+  </icon>
+  <android>
+    <manifestAdditions><![CDATA[
+		<manifest>
+			<application android:hardwareAccelerated="true" /> 			
+			<uses-permission android:name="android.permission.INTERNET" />			 
+			<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		</manifest>]]>
+	</manifestAdditions>
+  </android>
+ 
+   <iPhone> 
+        <InfoAdditions>
+		<![CDATA[ 	
+		
+			
+			<key>UIPrerenderedIcon</key> 
+			<true/> 
+			
+			<key>UIDeviceFamily</key> 
+			<array>				
+				<!-- 1：支援 iPhone, iPod Touch -->
+				<string>1</string> 				
+				
+				<!-- 2：支援 iPad -->
+				<!--<string>2</string>-->
+			</array>
+			
+			<key>UIRequiredDeviceCapabilities</key> 
+            <array>
+                <string>location-services</string>
+            </array>
+		
+			
+        ]]>
+		</InfoAdditions> 
+		<requestedDisplayResolution>high</requestedDisplayResolution>
+		
+    </iPhone> 
+</application>

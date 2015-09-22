@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding ="utf-8"?>
+<swc xmlns="http://www.adobe.com/flash/swccatalog/9">
+  <versions>
+    <swc version="1.2" />
+    <flex version="4.6.0" build="23201" minimumSupportedVersion="3.0.0" />
+  </versions>
+  <features>
+    <feature-script-deps />
+    <feature-files />
+  </features>
+  <libraries>
+    <library path="library.swf">
+      <script name="_f085d63f63a978c91266a4eee6e5bd1cf17812ddc96ddb78c079c8fc2693e9d9_flash_display_Sprite" mod="1344070587168" signatureChecksum="1244101553" >
+        <def id="_f085d63f63a978c91266a4eee6e5bd1cf17812ddc96ddb78c079c8fc2693e9d9_flash_display_Sprite" /> 
+        <dep id="flash.system:Security" type="e" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.display:Sprite" type="i" /> 
+      </script>
+      <script name="com/milkmidi/android/extensions/AndriodExtension" mod="1344065970918" signatureChecksum="2332653868" >
+        <def id="com.milkmidi.android.extensions:AndriodExtension" /> 
+        <dep id="flash.events:StatusEvent" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="e" /> 
+        <dep id="flash.external:ExtensionContext" type="s" /> 
+        <dep id="AS3" type="n" /> 
+        <dep id="flash.events:EventDispatcher" type="i" /> 
+      </script>
+      <digests>
+        <digest type="SHA-256" signed="false" value="97c943a02247157c27d4fed81aa3394ac29a927e0d0ceea30ae21b368ccaa7a3"   />
+      </digests>
+    </library>
+  </libraries>
+  <files>
+  </files>
+</swc>

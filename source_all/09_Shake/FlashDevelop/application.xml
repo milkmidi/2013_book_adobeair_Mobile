@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+	
+	<id>com.milkmidi.shake</id>	
+	
+	<name>Shake</name> 
+	<filename>Shake</filename>	
+	<versionNumber>1</versionNumber>	
+	<versionLabel>0.1 Beta 1</versionLabel>	
+	<supportedProfiles>mobileDevice</supportedProfiles>		
+	<copyright>Copyright © milkmidi</copyright>		
+	<initialWindow>		
+		<content>application.swf</content>	
+		
+		<!-- 
+		應用程式顯示方向 
+		portrait：縱向
+		landscape：橫向
+		-->
+		<aspectRatio>landscape</aspectRatio>		
+		<autoOrients>false</autoOrients>			
+		<fullScreen>true</fullScreen>		
+		<renderMode>gpu</renderMode>		
+		
+	</initialWindow>
+	
+	
+	<icon>	
+		<image36x36>icons/36.png</image36x36>
+		<image48x48>icons/48.png</image48x48>
+		<image57x57>icons/57.png</image57x57>
+		<image72x72>icons/72.png</image72x72>		
+		<image114x114>icons/114.png</image114x114>
+		<image512x512>icons/512.png</image512x512>
+	</icon>
+	
+	<android>
+		<manifestAdditions>			  
+		<![CDATA[
+			<manifest android:installLocation="preferExternal">		
+				
+				
+				<application android:hardwareAccelerated="true" /> 			
+				<uses-permission android:name="android.permission.INTERNET"/>		
+				
+			</manifest>
+			
+		]]>
+		</manifestAdditions>
+	</android>
+	
+    <iPhone> 
+        <InfoAdditions>
+		<![CDATA[ 		
+		
+			
+			<key>UIPrerenderedIcon</key> 
+			<true/> 
+			
+			<key>UIDeviceFamily</key> 
+			<array>				
+				<!-- 1：支援 iPhone, iPod Touch -->
+				<string>1</string> 				
+				
+				<!-- 2：支援 iPad -->
+				<!--<string>2</string>-->
+			</array>
+		
+			
+        ]]>
+		</InfoAdditions> 
+		<requestedDisplayResolution>high</requestedDisplayResolution>
+		
+    </iPhone> 
+	<!-- 
+	AIR options:
+	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+	AIR mobile options:
+	http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffe.html
+	Android manifest documentation:
+	http://developer.android.com/guide/topics/manifest/manifest-intro.html
+	-->
+</application>

@@ -1,0 +1,14 @@
+<extension xmlns="http://ns.adobe.com/air/extension/2.5">
+	<id>com.milkmidi.android.extensions</id>
+	<versionNumber>1.0</versionNumber>
+	<platforms>
+		<platform name="Android-ARM">
+			<applicationDeployment>
+				<nativeLibrary>com.milkmidi.android.extensions.jar</nativeLibrary>
+				<initializer>com.milkmidi.android.extensions.AndriodExtension</initializer>
+				<finalizer>com.milkmidi.android.extensions.AndriodExtension</finalizer>
+			</applicationDeployment>
+		</platform>
+	</platforms>
+</extension>
+		

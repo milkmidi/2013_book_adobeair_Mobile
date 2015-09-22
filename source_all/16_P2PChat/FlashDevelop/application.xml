@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+	
+	<extensions>		
+		<extensionID>pl.mateuszmackowiak.nativeANE.NativeAlert</extensionID>		
+	</extensions>
+	
+	<id>com.milkmidi.p2p.chat</id>
+	<versionNumber>0.1</versionNumber>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+	<filename>P2PChat</filename>
+	
+	<name>P2PChat</name>
+	<description></description>
+	<copyright></copyright>
+	
+	<android>
+		<manifestAdditions><![CDATA[
+		
+			<manifest android:installLocation="preferExternal">
+				<uses-feature android:name="android.hardware.camera.autofocus"/>
+				<uses-permission android:name="android.permission.CAMERA" />		
+				<uses-permission android:name="android.permission.INTERNET"/>		
+				<uses-permission android:name="android.permission.WAKE_LOCK"/>	
+				<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+				<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+			</manifest>
+			
+		]]></manifestAdditions>
+	</android>
+    <iPhone> 
+        <InfoAdditions><![CDATA[ 
+		
+			<key>UIStatusBarStyle</key> 
+			<string>UIStatusBarStyleBlackOpaque</string> 
+			<key>UIRequiresPersistentWiFi</key> 
+			<string>NO</string>
+			<key>UIPrerenderedIcon</key>  
+			<true/>
+			<key>UIApplicationExitsOnSuspend</key>
+			<true/>
+			
+			<key>UIDeviceFamily</key>
+			<array>
+				<!-- iPhone support -->
+				<string>1</string> 
+				<!-- iPad support -->
+				<!--<string>2</string>-->
+			</array>
+				
+        ]]></InfoAdditions> 
+		<requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone> 
+	
+	<initialWindow>
+		<title>P2PChat</title>
+		<content>p2p.swf</content>
+		<visible>true</visible>
+		<fullScreen>true</fullScreen>
+		<autoOrients>false</autoOrients>
+		<aspectRatio>landscape</aspectRatio>
+		<renderMode>auto</renderMode>
+	</initialWindow>
+	
+	<icon>
+		<image48x48>icons/48.png</image48x48>
+		<image57x57>icons/57.png</image57x57>
+		<image72x72>icons/72.png</image72x72>
+		<image114x114>icons/114.png</image114x114>
+		<image512x512>icons/512.png</image512x512>
+	</icon>
+	
+	<!-- 
+	AIR options:
+	http://livedocs.adobe.com/flex/3/html/File_formats_1.html#1043413
+	
+	AIR mobile options:
+	http://help.adobe.com/en_US/air/build/WSfffb011ac560372f-5d0f4f25128cc9cd0cb-7ffe.html
+	
+	Android manifest documentation:
+	http://developer.android.com/guide/topics/manifest/manifest-intro.html
+	-->
+</application>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<application xmlns="http://ns.adobe.com/air/application/3.4">
+	
+	
+	<!--<extensions>		
+		<extensionID>com.milkmidi.android.extensions</extensionID>
+		<extensionID>com.adobe.Vibration</extensionID>
+	</extensions>-->
+	
+	<id>milkmidi.air3.demo.AIR3Extensionsdemo</id>
+	<versionNumber>3</versionNumber>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+	<filename>Hello Extensions</filename>
+	
+	<name>Hello Extensions</name>
+	<description>Hello Extensions</description>
+	<copyright>milkmidi</copyright>
+	
+	<android>
+		<manifestAdditions><![CDATA[
+			
+			<manifest android:installLocation="auto">
+				
+			
+				
+				<uses-permission android:name="android.permission.WAKE_LOCK" />				
+				<uses-permission android:name="android.permission.VIBRATE" />		
+			</manifest>
+			
+		]]></manifestAdditions>
+	</android>
+	
+	<initialWindow>
+		<title>Hello Extensions</title>
+		<content>AIR3Extensionsdemo.swf</content>
+		<visible>true</visible>		
+		<fullScreen>false</fullScreen>
+		<renderMode>gpu</renderMode>
+	</initialWindow>
+	
+	<icon>
+		<image72x72>icons/icon_72.png</image72x72>
+	</icon>
+	
+</application>

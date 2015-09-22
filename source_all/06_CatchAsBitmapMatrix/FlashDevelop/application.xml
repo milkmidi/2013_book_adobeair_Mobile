@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<application xmlns="http://ns.adobe.com/air/application/3.2">
+
+	<id>com.milkmidi.catchAsBitmapMatrixDemo</id>
+	<versionNumber>1.0.0</versionNumber>
+	<versionLabel>1.0</versionLabel>
+	<name>Hello CatchAsBitmapMatrix</name>
+	<filename>Hello CatchAsBitmapMatrix</filename>
+	<supportedProfiles>mobileDevice</supportedProfiles>
+	<description />
+	<copyright>milkmidi</copyright>
+
+	<initialWindow>
+		<content>catchAsBitmapMatrixDemo.swf</content>
+		<fullScreen>true</fullScreen>
+		<aspectRatio>portrait</aspectRatio>
+		<renderMode>gpu</renderMode>
+		<autoOrients>false</autoOrients>
+	</initialWindow>
+
+	<icon>
+		<image36x36>icons/36.png</image36x36>
+		<image48x48>icons/48.png</image48x48>
+		<image72x72>icons/72.png</image72x72>
+		<image57x57>icons/57.png</image57x57>
+		<image114x114>icons/114.png</image114x114>
+		<image512x512>icons/512.png</image512x512>
+	</icon>
+
+
+
+	<android>
+		<manifestAdditions>
+			<![CDATA[			
+			<manifest android:installLocation="preferExternal">
+				
+				<!-- Android3.x 以上的版本, 可以開啟硬體加速功能 -->
+				<application android:hardwareAccelerated="true" /> 	
+				
+				<!-- 避免進入休眠的權限 -->
+				<uses-permission android:name="android.permission.WAKE_LOCK"/>
+			</manifest>
+			]]>
+		</manifestAdditions>
+	</android>
+
+	<iPhone>
+		<InfoAdditions>
+			<![CDATA[ 		
+			
+			<key>UIPrerenderedIcon</key>  
+			<true/>				
+			<key>UIDeviceFamily</key>
+			<array>				
+				<string>1</string> 				
+				<!--<string>2</string>-->
+			</array>				
+        ]]>
+		</InfoAdditions>
+		<requestedDisplayResolution>high</requestedDisplayResolution>
+	</iPhone>
+
+
+
+
+</application>
